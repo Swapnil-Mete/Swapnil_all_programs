@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int size, i, j, n, count;
+    cout << "Enter the size of array\n"
+         << endl;
+    cin >> size;
+    int a[size];
+    for (i = 0; i < size; i++)
+    {
+        cout << "Enter element in array\n"
+             << endl;
+        cin >> a[i];
+    }
+    cout << "Reverse elements of the array is as below" << endl;
+    for (i = size; i >= 0; i--)
+    {
+        cout << a[i];
+    }
+    cout << "Enter the element to search in array\n"
+         << endl;
+    cin >> n;
+    for (i = 0; i < size; i++)
+    {
+        if (n == a[i])
+        {
+            count = 1;
+            break;
+        }
+    }
+    if (count == 1)
+    {
+        cout << "Element found at position " << i + 1 << endl;
+    }
+    else
+    {
+        cout << "Element not found" << endl;
+    }
+
+    return 0;
+}
